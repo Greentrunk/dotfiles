@@ -12,8 +12,3 @@ compinit
 # End of lines added by compinstall
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo !! >>~/.zshrc
-!!
-!!
-!!
-!!
