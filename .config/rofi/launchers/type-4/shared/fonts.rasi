@@ -1,0 +1,9 @@
+/**
+ *
+ * Fonts
+ *
+ **/
+
+* {
+    font: "SpaceMono Nerd Font 24";
+}
