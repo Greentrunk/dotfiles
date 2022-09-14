@@ -22,7 +22,7 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: Noto Sans Regular 10
+font pango: SpaceMono Nerd Font 10
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -196,6 +196,11 @@ bindsym $mod+space exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher
 # alternative
 # keybinding list in editor:
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
+
+# Start Polybar
+exec zash ~/.config/polybar/forest/launch.sh
+# Restart Polybar
+bindsym $mod+Control+p exec zsh ~/.config/polybar/forest/launch.sh
 
 # Backlight control
 bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
@@ -424,5 +429,3 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # clipman-applet
 #exec --no-startup-id xfce4-clipman
 
-# Start Polybar
-exec polybar -q main -c ~/.config/polybar/forest/config.ini  
