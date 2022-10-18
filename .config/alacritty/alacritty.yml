@@ -30,4 +30,9 @@ font:
     family: SpaceMono Nerd Font
     style: Regular
 
-  size: 19
+  size: 17
+
+window:
+  padding:
+    x: 15
+    y: 15
