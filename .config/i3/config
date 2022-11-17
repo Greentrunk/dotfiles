@@ -22,7 +22,7 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: SpaceMono Nerd Font 10
+font pango: GohuFont Nerd Font 12 
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -47,14 +47,14 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 1
+new_window pixel 5
 
 # thin borders
 # hide_edge_borders both
 
 # Set inner/outer gaps
 gaps inner 6
-gaps outer 3
+gaps outer 6
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -320,7 +320,7 @@ assign [class="Thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace then the current:
-for_window [class=Xfce4-terminal] focus
+for_window [class=alacritty] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus

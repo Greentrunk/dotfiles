@@ -27,12 +27,12 @@ colors:
 #font
 font:
   normal:
-    family: SpaceMono Nerd Font
-    style: Regular
+    family: GohuFont Nerd Font 
+    style: Regular 
 
-  size: 17
-
+  size: 15 
 window:
   padding:
     x: 15
     y: 15
+  decorations: none
