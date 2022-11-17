@@ -32,7 +32,7 @@ set $mod Mod4
 #####################
 
 # default i3 tiling mode:
-workspace_layout default
+#workspace_layout default
 
 # i3 stacking layout:
 # Each window will be fullscreen and tabbed top to bottom.
@@ -47,10 +47,10 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 5
+new_window pixel 1
 
 # thin borders
-# hide_edge_borders both
+hide_edge_borders both
 
 # Set inner/outer gaps
 gaps inner 6
@@ -352,7 +352,7 @@ for_window [class=TelegramDesktop] focus
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+exec_always --no-startup-id picom --config  ~/.config/picom/picom.conf
 
 #############################################
 # autostart applications/services on login: #
