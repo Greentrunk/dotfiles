@@ -27,7 +27,7 @@ colors:
 #font
 font:
   normal:
-    family: GohuFont Nerd Font 
+    family: BlexMono Nerd Font 
     style: Regular 
 
   size: 15 
