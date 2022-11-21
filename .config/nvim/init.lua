@@ -51,3 +51,6 @@ require("user.indent-blankline")
 
 -- alpha
 require("user.alpha")
+
+-- which-key
+require("user.which_key")

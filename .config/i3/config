@@ -47,17 +47,18 @@ set $mod Mod4
 ##############################
 
 #border indicator on windows:
-new_window pixel 1
+# new_window pixel -2
 
 # thin borders
-hide_edge_borders both
+# hide_edge_borders both
 
 # Set inner/outer gaps
 gaps inner 6
 gaps outer 6
 
 # show window title bars (not officially supported with i3gaps)
-#default_border normal
+default_border pixel 0
+default_floating_border pixel 0
 
 # window title alignment
 #title_align center
