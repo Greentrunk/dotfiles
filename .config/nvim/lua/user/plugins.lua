@@ -47,6 +47,8 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- auto pairs for completions
 	use("numToStr/Comment.nvim") -- easy commenting
 	use("lewis6991/impatient.nvim")
+	use("MunifTanjim/nui.nvim") -- ui component framework
+	use("rcarriga/nvim-notify") -- notifications
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
@@ -71,7 +73,12 @@ return packer.startup(function(use)
 	use("williamboman/mason.nvim") -- simple to use language server installer
 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- linting, formatting, and more
-
+	use({
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = function()
+			require("lsp_lines").setup()
+		end,
+	})
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- fuzzy finder for files and text grep
 	use("nvim-telescope/telescope-media-files.nvim") -- show media in Telescope prompt
@@ -134,8 +141,22 @@ return packer.startup(function(use)
 	-- alpha
 	use("goolord/alpha-nvim")
 
-  -- which-key
-  use ("folke/which-key.nvim")
+	-- which-key
+	use("folke/which-key.nvim")
+
+	-- leap
+	use("ggandor/leap.nvim")
+
+	-- image
+	use({
+		"samodostal/image.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
+
+  -- noice
+  use("folke/noice.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

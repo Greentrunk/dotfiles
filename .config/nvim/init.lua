@@ -54,3 +54,12 @@ require("user.alpha")
 
 -- which-key
 require("user.which_key")
+
+-- leap
+require("user.leap")
+
+-- image
+require("user.image")
+
+-- noice
+require("user.noice")
