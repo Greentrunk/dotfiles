@@ -12,6 +12,9 @@ require("user.cmp")
 -- lsp
 require("user.lsp")
 
+-- rust-tools
+require("user.rust-tools")
+
 -- Telescope
 require("user.telescope")
 
