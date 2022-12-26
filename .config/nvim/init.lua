@@ -12,9 +12,6 @@ require("user.cmp")
 -- lsp
 require("user.lsp")
 
--- rust-tools
-require("user.rust-tools")
-
 -- Telescope
 require("user.telescope")
 
@@ -66,3 +63,9 @@ require("user.image")
 
 -- noice
 require("user.noice")
+
+-- dap
+require("user.mason-nvim-dap")
+require("user.dap-config-cpp")
+require("user.dapui")
+require("user.dap-keybinds")

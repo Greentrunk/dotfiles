@@ -49,7 +49,6 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("MunifTanjim/nui.nvim") -- ui component framework
 	use("rcarriga/nvim-notify") -- notifications
-	use("mfussenegger/nvim-dap") -- debugging
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
@@ -80,7 +79,6 @@ return packer.startup(function(use)
 			require("lsp_lines").setup()
 		end,
 	})
-	use("simrat39/rust-tools.nvim") -- extra rust tools
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- fuzzy finder for files and text grep
@@ -160,6 +158,10 @@ return packer.startup(function(use)
 
 	-- noice
 	use("folke/noice.nvim")
+
+	-- dap
+	use("mfussenegger/nvim-dap")
+	use("jayp0521/mason-nvim-dap.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

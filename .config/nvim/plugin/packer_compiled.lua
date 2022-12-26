@@ -180,6 +180,11 @@ _G.packer_plugins = {
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
+  ["mason-nvim-dap.nvim"] = {
+    loaded = true,
+    path = "/home/cjp/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
+    url = "https://github.com/jayp0521/mason-nvim-dap.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -275,11 +280,6 @@ _G.packer_plugins = {
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
-  ["rust-tools.nvim"] = {
-    loaded = true,
-    path = "/home/cjp/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
-  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
@@ -296,7 +296,7 @@ _G.packer_plugins = {
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["twilight.nvim"] = {
-    config = { "\27LJ\2\nT\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\nalpha\4\0€€ ÿ\3\fcontext\3\20\nsetup\rtwilight\frequire\0" },
+    config = { "\27LJ\2\nT\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\fcontext\3\20\nalpha\4\0€€ ÿ\3\nsetup\rtwilight\frequire\0" },
     loaded = true,
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/twilight.nvim",
     url = "https://github.com/folke/twilight.nvim"
@@ -314,14 +314,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+try_loadstring("\27LJ\2\nT\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\fcontext\3\20\nalpha\4\0€€ ÿ\3\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
+time([[Config for twilight.nvim]], false)
 -- Config for: lsp_lines.nvim
 time([[Config for lsp_lines.nvim]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
 time([[Config for lsp_lines.nvim]], false)
--- Config for: twilight.nvim
-time([[Config for twilight.nvim]], true)
-try_loadstring("\27LJ\2\nT\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\nalpha\4\0€€ ÿ\3\fcontext\3\20\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
-time([[Config for twilight.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

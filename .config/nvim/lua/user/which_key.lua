@@ -79,7 +79,6 @@ local opts = {
 }
 
 local mappings = {
-	["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -96,6 +95,19 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+
+	--[[ d = { ]]
+	--[[ 	name = "Debug", ]]
+	--[[ 	b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" }, ]]
+	--[[ 	g = { "<cmd>lua require'dap'.continue()<cr>", "Continue" }, ]]
+	--[[ 	i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" }, ]]
+	--[[ 	o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" }, ]]
+	--[[ 	O = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" }, ]]
+	--[[ 	r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl Toggle" }, ]]
+	--[[ 	l = { "<cmd>lua require'dap'.run_last()<cr>", "Run Last" }, ]]
+	--[[ 	u = { "<cmd>lua require'dapui'.toggle()<cr>", "Dapui Toggle" }, ]]
+	--[[ 	t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" }, ]]
+	--[[ }, ]]
 
 	p = {
 		name = "Packer",
@@ -133,26 +145,21 @@ local mappings = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		d = {
-			"<cmd>Telescope lsp_document_diagnostics<cr>",
+			"<cmd>Telescope diagnostics<cr>",
 			"Document Diagnostics",
-		},
-		w = {
-			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
-			"Workspace Diagnostics",
 		},
 		f = { "<cmd>lua vim.lsp.buf.format({async=true})<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		I = { "<cmd>Mason<cr>", "Installer Info" },
 		j = {
-			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+			"<cmd>lua vim.diagnostic.goto_next()<CR>",
 			"Next Diagnostic",
 		},
 		k = {
-			"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+			"<cmd>lua vim.diagnostic.goto_prev()<cr>",
 			"Prev Diagnostic",
 		},
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = {
@@ -184,18 +191,5 @@ local mappings = {
 	},
 }
 
-local vopts = {
-	mode = "v", -- VISUAL mode
-	prefix = "<leader>",
-	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-	silent = true, -- use `silent` when creating keymaps
-	noremap = true, -- use `noremap` when creating keymaps
-	nowait = true, -- use `nowait` when creating keymaps
-}
-local vmappings = {
-	["/"] = { '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', "Comment" },
-}
-
 which_key.setup(setup)
 which_key.register(mappings, opts)
-which_key.register(vmappings, vopts)

@@ -102,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lvim='/home/cjp/.local/bin/lvim'
+
+# Created by `userpath` on 2022-12-10 16:20:24
+export PATH="$PATH:/home/cjp/.local/bin"
