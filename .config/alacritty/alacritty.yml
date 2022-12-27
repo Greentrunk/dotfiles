@@ -30,7 +30,7 @@ font:
     family: BlexMono Nerd Font 
     style: Regular 
 
-  size: 14
+  size: 12
 window:
   padding:
     x: 15

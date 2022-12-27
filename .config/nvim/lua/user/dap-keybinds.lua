@@ -6,7 +6,7 @@ if not (dap_ok and dap_ui_ok) then
 	return
 end
 
-vim.fn.sign_define("DapBreakpoint", { text = "" })
+vim.fn.sign_define("DapBreakpoint", { text = "🛑" })
 
 -- Start debugging session
 vim.keymap.set("n", "<localleader>ds", function()
