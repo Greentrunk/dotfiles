@@ -96,18 +96,22 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
-	--[[ d = { ]]
-	--[[ 	name = "Debug", ]]
-	--[[ 	b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" }, ]]
-	--[[ 	g = { "<cmd>lua require'dap'.continue()<cr>", "Continue" }, ]]
-	--[[ 	i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" }, ]]
-	--[[ 	o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" }, ]]
-	--[[ 	O = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" }, ]]
-	--[[ 	r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl Toggle" }, ]]
-	--[[ 	l = { "<cmd>lua require'dap'.run_last()<cr>", "Run Last" }, ]]
-	--[[ 	u = { "<cmd>lua require'dapui'.toggle()<cr>", "Dapui Toggle" }, ]]
-	--[[ 	t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" }, ]]
-	--[[ }, ]]
+	d = {
+		name = "Debug",
+		s = { "<cmd> lua require'notify'('leader + ds to start debugging session!')<cr>", "Start Debugging" },
+		l = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Action" },
+		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+		n = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+		o = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+		C = { "<cmd>lua require'notify'('leader + dC to clear breakpoints!')<cr>", "Clear Breakpoints" },
+		e = { "<cmd>lua require'notify'('leader + de to end debugging session!)<cr>", "End Debugging" },
+		--[[ r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl Toggle" }, ]]
+		--[[ l = { "<cmd>lua require'dap'.run_last()<cr>", "Run Last" }, ]]
+		--[[ u = { "<cmd>lua require'dapui'.toggle()<cr>", "Dapui Toggle" }, ]]
+		--[[ t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" }, ]]
+	},
 
 	p = {
 		name = "Packer",
