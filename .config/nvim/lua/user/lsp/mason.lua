@@ -3,6 +3,13 @@ local servers = {
 	"pyright",
 	"jsonls",
 	"clangd",
+	"prettier",
+	"bash-language-server",
+	"write-good",
+	"tsc",
+	"selene",
+	"shellcheck",
+	"cpplint",
 }
 
 local settings = {

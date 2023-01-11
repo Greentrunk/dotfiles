@@ -87,7 +87,7 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	["C"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -96,9 +96,20 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
+	-- cmake commands for current project
+	c = {
+		name = "Cmake",
+		g = {
+			"<cmd>CMakeGenerate! build -DCMAKE_TOOLCHAIN_FILE=./vendor/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1<cr>",
+			"CMake Generate",
+		},
+		b = { "<cmd>CMakeBuild! --target Terroir Sandbox<cr>", "CMake Build" },
+		q = { "<cmd>CMakeClose<cr>", "Close CMake window" },
+	},
+
 	d = {
 		name = "Debug",
-		s = { "<cmd> lua require'notify'('leader + ds to start debugging session!')<cr>", "Start Debugging" },
+		--[[ s = { "<cmd> lua require'notify'('leader + ds to start debugging session!')<cr>", "Start Debugging" }, ]]
 		l = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Hover Action" },
 		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
 		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
@@ -106,7 +117,7 @@ local mappings = {
 		n = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
 		o = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
 		C = { "<cmd>lua require'notify'('leader + dC to clear breakpoints!')<cr>", "Clear Breakpoints" },
-		e = { "<cmd>lua require'notify'('leader + de to end debugging session!)<cr>", "End Debugging" },
+		--[[ e = { "<cmd>lua require'notify'('leader + de to end debugging session!)<cr>", "End Debugging" }, ]]
 		--[[ r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl Toggle" }, ]]
 		--[[ l = { "<cmd>lua require'dap'.run_last()<cr>", "Run Last" }, ]]
 		--[[ u = { "<cmd>lua require'dapui'.toggle()<cr>", "Dapui Toggle" }, ]]
@@ -148,11 +159,14 @@ local mappings = {
 	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+		b = { "<cmd>lua vim.lsp.buf.declaration()<CR>,", "Declaration" },
+		c = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
 		d = {
 			"<cmd>Telescope diagnostics<cr>",
 			"Document Diagnostics",
 		},
 		f = { "<cmd>lua vim.lsp.buf.format({async=true})<cr>", "Format" },
+		h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>Mason<cr>", "Installer Info" },
 		j = {

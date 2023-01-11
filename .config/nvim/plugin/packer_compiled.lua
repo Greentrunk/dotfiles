@@ -225,6 +225,11 @@ _G.packer_plugins = {
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
   },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/home/cjp/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -310,6 +315,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cjp/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-cmake"] = {
+    loaded = true,
+    path = "/home/cjp/.local/share/nvim/site/pack/packer/start/vim-cmake",
+    url = "https://github.com/cdelledonne/vim-cmake"
   },
   ["which-key.nvim"] = {
     loaded = true,

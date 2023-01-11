@@ -80,6 +80,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+  -- linting
+  use("mfussenegger/nvim-lint")
+
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- fuzzy finder for files and text grep
 	use("nvim-telescope/telescope-media-files.nvim") -- show media in Telescope prompt
@@ -163,6 +166,9 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("jayp0521/mason-nvim-dap.nvim")
 	use("rcarriga/nvim-dap-ui")
+
+  -- cmake
+  use("cdelledonne/vim-cmake")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
