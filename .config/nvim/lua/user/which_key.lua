@@ -103,7 +103,7 @@ local mappings = {
 			"<cmd>CMakeGenerate! build -DCMAKE_TOOLCHAIN_FILE=./vendor/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1<cr>",
 			"CMake Generate",
 		},
-		b = { "<cmd>CMakeBuild! --target Terroir Sandbox<cr>", "CMake Build" },
+		b = { "<cmd>CMakeBuild! --target Terroir Sandbox opengltest<cr>", "CMake Build" },
 		q = { "<cmd>CMakeClose<cr>", "Close CMake window" },
 	},
 
