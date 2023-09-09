@@ -105,3 +105,9 @@ alias lvim='/home/cjp/.local/bin/lvim'
 
 # Created by `userpath` on 2022-12-10 16:20:24
 export PATH="$PATH:/home/cjp/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export JAVA_HOME=/usr/lib/jvm/default/

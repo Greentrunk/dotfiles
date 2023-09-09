@@ -5,5 +5,5 @@
  **/
 
 * {
-    font: "BlexMono Nerd Font 24";
+    font: "FiraCode Nerd Font 22";
 }
